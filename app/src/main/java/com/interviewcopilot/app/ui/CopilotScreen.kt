@@ -281,7 +281,7 @@ private fun ModeCard(vm: CopilotVM, onToggleRec: () -> Unit) {
             DropdownMenu(expanded = open, onDismissRequest = { open = false }) {
                 Prompts.modes.forEach { m ->
                     DropdownMenuItem(text = { Text(m) }, onClick = {
-                        vm.setMode(m)
+                        vm.updateMode(m)
                         open = false
                     })
                 }
