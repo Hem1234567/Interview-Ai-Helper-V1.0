@@ -108,7 +108,7 @@ class CopilotVM(app: Application) : AndroidViewModel(app) {
     val shownNumber: Int
         get() = if (viewIndex in session.indices) viewIndex + 1 else session.size + 1
 
-    fun setMode(m: String) {
+    fun updateMode(m: String) {
         mode = m
         put("mode", m)
     }
